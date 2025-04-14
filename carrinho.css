@@ -11,12 +11,13 @@ body {
 header {
     padding: 0 1rem 0 1rem;
     width: 100%;
-    height: 5rem;
+    height: 5.5rem;
     background-color: #e5b2af;
 }
 
 nav {
     display: flex;
+    align-items: center;
 }
 
 .lado1 {
@@ -65,23 +66,42 @@ main {
 
 .produto {
     display: flex;
-    width: 100%;
     justify-content: space-between;
-    padding-top: 40px;
     align-items: center;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 17px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .produto span {
     display: flex;
 }
 
+.produto img {
+    width: 8rem;
+    height: 8rem;
+}
+
 footer {
-    display: flex;
-    background-color: #f5f5f5;
-    height: 83px;
-    justify-content: space-around;
-    align-items: center;
     background-color: #e5b2af;
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: space-around;
+    position: fixed;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+}
+
+.continuarPedido {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    align-items: center;
+    height: 83px;
+    width: 100%;
 }
 
 .total {
@@ -140,5 +160,26 @@ footer {
 .btn_deletar {
     border: none;
     background-color: white;
-    font-size: 40px;
+}
+
+.btn_deletar svg path {
+    color: #f00000;
+    font-weight: bolder;
+}
+
+.preco-produto {
+    display: flex;
+    padding-right: 50px;
+
+    & span {
+        padding-left: 5px;
+    }
+}
+
+.preco-total {
+    display: flex;
+
+    & span {
+        padding-left: 5px;
+    }
 }
