@@ -32,6 +32,9 @@ nav {
 }
 
 .logo_nome {
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+    font-weight: bold;
     padding-top: 5px;
 }
 
@@ -66,22 +69,31 @@ main {
 
 .produto {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background-color: white;
     padding: 5px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.produto span {
+.produto span.qtd {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 120px 0 115px;
 }
 
 .produto img {
     width: 8rem;
     height: 8rem;
+    margin-right: 110px;
+}
+
+.descricao_img {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
 }
 
 footer {
@@ -99,9 +111,10 @@ footer {
     display: flex;
     justify-content: space-around;
     position: fixed;
-    align-items: center;
-    height: 83px;
+    height: auto;
     width: 100%;
+    position: fixed;
+    bottom: 75px;
 }
 
 .total {
@@ -113,15 +126,11 @@ footer {
 }
 
 .mais {
-    border: 1px solid green;
+    border: none;
     width: 25px;
     height: 25px;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     border-radius: 2px;
-}
-
-.mais:hover {
-    background-color: rgb(2, 82, 2);
 }
 
 .mais svg path {
@@ -129,19 +138,15 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .menos {
-    border: 1px solid #f00000;
     width: 25px;
     height: 25px;
-    background-color: #f00000;
     border-radius: 2px;
-}
-
-.menos:hover {
-    background-color: #b60000;
+    border: none;
+    background-color: white;
 }
 
 .menos svg path {
@@ -149,12 +154,16 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .quantidade {
     font-size: 20px;
-    padding: 0 30px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    padding-top: 12px;
 }
 
 .btn_deletar {
@@ -169,7 +178,10 @@ footer {
 
 .preco-produto {
     display: flex;
-    padding-right: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 80px;
 
     & span {
         padding-left: 5px;
@@ -178,8 +190,18 @@ footer {
 
 .preco-total {
     display: flex;
+    height: 80px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
 
     & span {
         padding-left: 5px;
+        width: 100px;
     }
+}
+
+.valorSubtotal {
+    width: 180px;
 }
